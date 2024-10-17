@@ -1,0 +1,36 @@
+﻿<Window x:Class="WindowsSignalSampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsSignalSampleApp"
+        mc:Ignorable="d"
+        Title="Controller"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Label Margin="0,0,30,0">parameter1</Label>
+                <Slider x:Name="parameter1" Width="120" 
+                    Minimum="1"  TickPlacement="Both"
+                    IsSnapToTickEnabled="True"  Maximum="10"
+                    ValueChanged="ChangingParameter" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Label Margin="0,0,30,0">parameter2</Label>
+                <Slider x:Name="parameter2" Width="120" 
+                    Minimum="1"  TickPlacement="Both"
+                    IsSnapToTickEnabled="True"  Maximum="10"
+                    ValueChanged="ChangingParameter" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Label Margin="0,0,30,0">parameter3</Label>
+                <Slider x:Name="parameter3" Width="120" 
+                    Minimum="1"  TickPlacement="Both"
+                    IsSnapToTickEnabled="True"  Maximum="10"
+                    ValueChanged="ChangingParameter" HorizontalAlignment="Right"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

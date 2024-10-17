@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SyncSampleApp
+namespace WindowsSignalSampleApp
 {
     /// <summary>
     /// MainWindow.xaml の相互作用ロジック
@@ -23,13 +24,12 @@ namespace SyncSampleApp
         public MainWindow()
         {
             InitializeComponent();
+            Monitor monitor = new Monitor();
+            monitor.Show();
         }
-
-        private void UpdateValue()
+        private void UpdateValue(string parameter)
         {
-            monitor.Content = int.Parse(parameter.Value.ToString());
         }
-
         private void ChangingParameter(object sender, RoutedEventArgs e)
         {
             // Note: Task.Run()はスレッドの使いまわし？それとも作っては捨ててる？
@@ -37,9 +37,10 @@ namespace SyncSampleApp
             {
                 this.Dispatcher.Invoke((Action)(() =>
                 {
-                    UpdateValue();
+                    string parameter = "";
+                    UpdateValue(parameter);
                 }));
-             });
+            });
         }
     }
 }

@@ -1,0 +1,27 @@
+﻿<Window x:Class="WindowsSignalSampleApp.Monitor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsSignalSampleApp"
+        mc:Ignorable="d"
+        Title="Monitor"
+        ResizeMode="NoResize"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <StackPanel Margin="10">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Label Margin="0,0,30,0">parameter1Text</Label>
+                <Label x:Name="parameter1Monitor" Margin="0,0,30,0">0</Label>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Label Margin="0,0,30,0">parameter2Text</Label>
+                <Label x:Name="parameter2Monitor" Margin="0,0,30,0">0</Label>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal">
+                <Label Margin="0,0,30,0">parameter3Text</Label>
+                <Label x:Name="parameter3Monitor" Margin="0,0,30,0">0</Label>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
